@@ -1,0 +1,38 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: interns
+  pool: 5
+  username: hamzaaltaf
+  timeout: 5000
+  port: 5432
+  
+test:
+  database: 
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  timeout: 5000
+  pool: 5
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: 5432
+  # adapter: postgresql
+  # encoding: unicode
+  # database: soup_test
+  # pool: 5
+  # username: hamzaaltaf
+  # timeout: 5000
+  # port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  timeout: 5000
+  pool: 5
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: 5432
